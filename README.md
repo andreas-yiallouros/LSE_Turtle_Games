@@ -52,3 +52,25 @@ How is 'spending_score' mapped to 'spending nature' and spending behaviour' meas
 Are spending scores comparable across customers?
 5.	The metadata describes 'loyalty_points' as 'a score based on the point value of the purchase'.
 How are 'loyalty_points' mapped to 'purchase value' (for example, is it one loyalty point per £1 of purchase)?
+
+## Insights from week 2
+Choosing the number of clusters is a key subject for discussion with the Turtle Games marketing department and other key stakeholders.
+
+From the elbow and silhouette methods five clusters seems optimal given the location of where the elbow and the silhouette peak seem most pronounced.
+
+However, looking at the scatterplot for seven clusters we can envisage a marketting strategy whereby customers could be classified into:
+
+| Cluster | Spending Score | Remuneration | Number of Customers | Percentage of Customers |
+| :-------------- | :-------------- | :-------------- | :-------------- | :-------------- |
+| Purple - 6 | Low | Low | 123 | 6% |
+| Black - 4 | High | Low | 269 | 13% |
+| Blue - 2 | Medium | Medium-Low | 767 | 38% |
+| Red - 0 | Low | Medium-High | 214 | 11% |
+| Green - 1 | High | Medium-High | 238 | 12% |
+| Brown - 3 | Low | High | 271 | 14% |
+| Yellow - 5 | High | High | 118 | 6% |
+
+*Questions to explore*
+
+1. Are the 2,000 customers in our data set from the same country / city or countries / cities with comparable cost of living? The optimal clusters for different countries may differ. 
+2. How is the spending score calculated? For example, over which period and taking into account which products? Does it take into account sales volume as well as profit margin?
