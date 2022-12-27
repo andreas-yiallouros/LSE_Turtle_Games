@@ -14,12 +14,12 @@ We will analyse the data over the following six weeks. Each week we will focus o
 
 The six questions as provided by Turtle Games are:
 
-1. How do customers accumulate loyalty points?
-2. How can groups within the customer base be used to target specific market segments?
-3. How can social data (e.g., customer reviews) be used to inform marketing campaigns?
-4. What is the impact of each product on sales?
-5. How reliable is the data? (e.g., normal distribution, skewness, or kurtosis)
-6. What is the relationship(s) between North American, European, and global sales?
+1. How do customers accumulate loyalty points? (Week 1)
+2. How can groups within the customer base be used to target specific market segments? (Week 2)
+3. How can social data (e.g., customer reviews) be used to inform marketing campaigns? (Week 3)
+4. What is the impact of each product on sales? (Week 4)
+5. How reliable is the data? (e.g., normal distribution, skewness, or kurtosis) (Week 5)
+6. What is the relationship(s) between North American, European, and global sales? (Week 6)
 
 We will collaborate as a team of data analysts using a GitHub repository.
 
