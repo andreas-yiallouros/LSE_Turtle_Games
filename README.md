@@ -74,3 +74,10 @@ However, looking at the scatterplot for seven clusters we can envisage a markett
 
 1. Are the 2,000 customers in our data set from the same country / city or countries / cities with comparable cost of living? The optimal clusters for different countries may differ. 
 2. How is the spending score calculated? For example, over which period and taking into account which products? Does it take into account sales volume as well as profit margin?
+
+## Insights from week 3
+- The summary statistics from the sentiment analysis are positive.
+- The full text comments show a lower level of polarisation compared to the summary comments.
+- The full text comments also show a higher number of negative sentiment outliers.
+- The lists of most common words seem not to include words with a negative sentiment.
+
