@@ -81,3 +81,8 @@ However, looking at the scatterplot for seven clusters we can envisage a markett
 - The full text comments also show a higher number of negative sentiment outliers.
 - The lists of most common words seem not to include words with a negative sentiment.
 
+## Insights from week 4
+- No missing values and no obvious inaccuracies.
+- Some of the products (games) are available in multiple gaming platforms.
+- In terms of global sales, the middle 50% of products sell between £1.1m and £6.4m. There are approximately 20 outliers, with a sales value above £15m. The bottom 25% of products sell £1m or less.
+- The sales performance for individual products seems relatively consistent across locations.
