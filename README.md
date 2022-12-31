@@ -86,3 +86,19 @@ However, looking at the scatterplot for seven clusters we can envisage a markett
 - Some of the products (games) are available in multiple gaming platforms.
 - In terms of global sales, the middle 50% of products sell between £1.1m and £6.4m. There are approximately 20 outliers, with a sales value above £15m. The bottom 25% of products sell £1m or less.
 - The sales performance for individual products seems relatively consistent across locations.
+
+## Insights from week 5
+- The data patterns are consistent across NA, EU and Global.
+
+- Sales in NA are highly correlated with sales in the EU.
+- Sales in NA and in the EU are respectively even more highly correlated with sales globally, which is as expected given sales globally include the sales in NA and in the EU.
+
+- The Shapiro-Wilk test was statistically significant for all data sets indicating that normal distribution cannot be assumed.
+
+- Skewness is consistent across all data sets with values above 4 indicating positively skewed data.
+
+- Kurtosis is consistent across all data sets with values above 30.
+
+- The Q-Q plots are also consistent across the data sets. They all confirm a fat tail on the high end of sales values (some products sell at many standard deviations above the mean) and no tail at the low end of sales values.
+
+- Other country sales are slightly less predictable which could be simply due to relatively small numbers.
