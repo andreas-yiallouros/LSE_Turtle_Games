@@ -102,3 +102,7 @@ However, looking at the scatterplot for seven clusters we can envisage a markett
 - The Q-Q plots are also consistent across the data sets. They all confirm a heavy tail on the high end of sales values (some products sell at many standard deviations above the mean) and a light tail at the low end of sales values.
 
 - Other country sales are slightly less predictable which could be simply due to relatively small numbers.
+
+## Insights from week 6
+
+- As expected given our earlier calculations of correlation, sales in one location can be used to predict sales in another.
