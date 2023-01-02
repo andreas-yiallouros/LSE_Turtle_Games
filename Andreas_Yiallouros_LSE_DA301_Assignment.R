@@ -193,13 +193,14 @@ sum(is.na(df_sales_clean_final))
 ## North America and European Union
 scat_na_eu <- 
   ggplot(df_sales_clean_final, aes(x = NA_Sales, y = EU_Sales)) +
-    geom_point(alpha = 0.2) +
+    geom_point(alpha = 0.3, color = "#00BA38") +
     scale_x_continuous(breaks = seq(2, 40, by = 2)) +
     scale_y_continuous(breaks = seq(2, 30, by = 2)) +
     labs(
       title = paste(
         "Most (but not all) sales are as high in North America...
 as they are in the European Union"),
+      subtitle = paste("Total number of products, and hence data points = 352"),
       x = "Sales in North America in £'m",
       y = "Sales in the EU in £'m"
   )
@@ -210,13 +211,14 @@ scat_na_eu
 ## North America and countries outside NA and the EU
 scat_na_other <-
   ggplot(df_sales_clean_final, aes(x = NA_Sales, y = Other_Sales)) +
-    geom_point(alpha = 0.2) +
+    geom_point(alpha = 0.3, color = "#00BA38") +
     scale_x_continuous(breaks = seq(2, 40, by = 2)) +
     scale_y_continuous(breaks = seq(1, 11, by = 1)) +
     labs(
       title = paste(
         "Most (but not all) sales are as high in North America...
 as they are in countries other than NA and the EU"),
+      subtitle = paste("Total number of products, and hence data points = 352"),
       x = "Sales in North America in £'m",
       y = "Sales in countries other than NA and the EU in £'m"
   )
@@ -227,13 +229,14 @@ scat_na_other
 ## North America and global
 scat_na_gl <- 
   ggplot(df_sales_clean_final, aes(x = NA_Sales, y = Global_Sales)) +
-    geom_point(alpha = 0.2) +
+    geom_point(alpha = 0.3, color = "#00BA38") +
     scale_x_continuous(breaks = seq(2, 40, by = 2)) +
     scale_y_continuous(breaks = seq(5, 70, by = 5)) +
     labs(
       title = paste(
         "Most (but not all) sales are as high in North America...
 as they are globally"),
+      subtitle = paste("Total number of products, and hence data points = 352"),
       x = "Sales in North America in £'m",
       y = "Sales globally in £'m"
   )
@@ -244,12 +247,13 @@ scat_na_gl
 ## EU and global
 scat_eu_gl <- 
   ggplot(df_sales_clean_final, aes(x = EU_Sales, y = Global_Sales)) +
-  geom_point(alpha = 0.2) +
+  geom_point(alpha = 0.3, color = "#00BA38") +
   scale_x_continuous(breaks = seq(2, 40, by = 2)) +
   scale_y_continuous(breaks = seq(5, 70, by = 5)) +
   labs(
     title = paste(
       "Most (but not all) sales are as high in the EU as they are globally"),
+    subtitle = paste("Total number of products, and hence data points = 352"),
     x = "Sales in the EU in £'m",
     y = "Sales globally in £'m"
   )
@@ -260,13 +264,14 @@ scat_eu_gl
 ## Other countries and global
 scat_other_gl <- 
   ggplot(df_sales_clean_final, aes(x = Other_Sales, y = Global_Sales)) +
-  geom_point(alpha = 0.2) +
+  geom_point(alpha = 0.3, color = "#00BA38") +
   scale_x_continuous(breaks = seq(1, 12, by = 1)) +
   scale_y_continuous(breaks = seq(5, 70, by = 5)) +
   labs(
     title = paste(
       "Most (but not all) sales are as high in other countries...
 as they are globally"),
+    subtitle = paste("Total number of products, and hence data points = 352"),
     x = "Sales in other countries in £'m",
     y = "Sales globally in £'m"
   )
@@ -280,14 +285,15 @@ scat_other_gl
 ## North America count of products by sales value.
 hist_na <- 
 ggplot(df_sales_clean_final, aes(x = NA_Sales)) +
-  geom_histogram(binwidth = 2, boundary = 0) +
+  geom_histogram(binwidth = 2, boundary = 0, alpha = 0.6, fill = "#00BA38") +
   scale_x_continuous(breaks = seq(2, 40, by = 2)) +
   scale_y_continuous(breaks = seq(10, 200, by = 10)) +
   labs(
     title = paste(
-      "North America:
-number of products selling between £0 and £2m, £2m and £4m, etc."),
-    x = "Sales in North America in £'m"
+      "Number of products selling between £0 and £2m, £2m and £4m, etc."),
+    subtitle = paste("North America"),
+    x = "Sales in North America in £'m",
+    y = "Number of products (total 352)"
   )
 
 ## View histogram.
@@ -298,14 +304,15 @@ hist_na
 ## European Union count of products by sales value.
 hist_eu <- 
 ggplot(df_sales_clean_final, aes(x = EU_Sales)) +
-  geom_histogram(binwidth = 1, boundary = 0) +
+  geom_histogram(binwidth = 1, boundary = 0, alpha = 0.6, fill = "#00BA38") +
   scale_x_continuous(breaks = seq(1, 25, by = 1)) +
   scale_y_continuous(breaks = seq(10, 160, by = 10)) +
   labs(
     title = paste(
-      "European Union:
-number of products selling between £0 and £1m, £1m and £2m, etc."),
-    x = "Sales in the European Union in £'m"
+      "Number of products selling between £0 and £1m, £1m and £2m, etc."),
+    subtitle = paste("European Union"),
+    x = "Sales in the European Union in £'m",
+    y = "Number of products (total 352)"
   )
 
 ## View histogram.
@@ -316,14 +323,15 @@ hist_eu
 ## Other countries count of products by sales value.
 hist_other <- 
 ggplot(df_sales_clean_final, aes(x = Other_Sales)) +
-  geom_histogram(binwidth = 1, boundary = 0) +
+  geom_histogram(binwidth = 1, boundary = 0, alpha = 0.6, fill = "#00BA38") +
   scale_x_continuous(breaks = seq(-1, 12, by = 1)) +
   scale_y_continuous(breaks = seq(10, 220, by = 10)) +
   labs(
     title = paste(
-      "Other countries:
-number of products selling exactly £0, between £0 and £1m, etc."),
-    x = "Sales in countries other than North America and the EU in £'m"
+      "Number of products selling exactly £0, between £0 and £1m, etc."),
+    subtitle = paste("Other countries"),
+    x = "Sales in countries other than North America and the EU in £'m",
+    y = "Number of products (total 352)"
   )
 
 ## View histogram.
@@ -335,14 +343,15 @@ hist_other
 ## Global count of products by sales value.
 hist_global <- 
 ggplot(df_sales_clean_final, aes(x = Global_Sales)) +
-  geom_histogram(binwidth = 5, boundary = 0) +
+  geom_histogram(binwidth = 5, boundary = 0, alpha = 0.6, fill = "#00BA38") +
   scale_x_continuous(breaks = seq(5, 70, by = 5)) +
   scale_y_continuous(breaks = seq(10, 220, by = 10)) +
   labs(
     title = paste(
-      "Global:
-number of products selling between £0 and £5m, £5m and £10m, etc."),
-    x = "Global sales in £'m"
+      "Number of products selling between £0 and £5m, £5m and £10m, etc."),
+    subtitle = paste("Global"),
+    x = "Global sales in £'m",
+    y = "Number of products (total 352)"
   )
 
 ## View histogram.
@@ -359,7 +368,7 @@ hist_global
 box_na <- 
 ggplot(df_sales_clean_final) +
   geom_boxplot(aes(y = NA_Sales),
-               alpha = .3) +
+               alpha = .3, fill = "#00BA38") +
   scale_y_continuous(breaks = seq(2, 40, by = 2)) +
   labs(
     title = paste(
@@ -381,7 +390,7 @@ box_na
 box_eu <- 
 ggplot(df_sales_clean_final) +
   geom_boxplot(aes(y = EU_Sales),
-               alpha = .3) +
+               alpha = .3, fill = "#00BA38") +
   scale_y_continuous(breaks = seq(1, 30, by = 1)) +
   labs(
     title = paste(
@@ -403,7 +412,7 @@ box_eu
 box_other <- 
 ggplot(df_sales_clean_final) +
   geom_boxplot(aes(y = Other_Sales),
-               alpha = .3) +
+               alpha = .3, fill = "#00BA38") +
   scale_y_continuous(breaks = seq(0.5, 11, by = 0.5)) +
   labs(
     title = paste(
@@ -425,7 +434,7 @@ box_other
 box_global <- 
 ggplot(df_sales_clean_final) +
   geom_boxplot(aes(y = Global_Sales),
-               alpha = .3) +
+               alpha = .3, fill = "#00BA38") +
   scale_y_continuous(breaks = seq(2, 80, by = 2)) +
   labs(
     title = paste(
@@ -558,7 +567,7 @@ skim(df_sales_per_product)
 scat_na_eu_grouped <- 
   ggplot(df_sales_per_product, aes(x = total_per_product_na,
                                    y = total_per_product_eu)) +
-  geom_point(alpha = 0.2) +
+  geom_point(alpha = 0.3, color = "#00BA38") +
   scale_x_continuous(breaks = seq(2, 40, by = 2)) +
   scale_y_continuous(breaks = seq(2, 30, by = 2)) +
   labs(
@@ -576,13 +585,14 @@ scat_na_eu_grouped
 scat_na_other_grouped <- 
   ggplot(df_sales_per_product, aes(x = total_per_product_na,
                                    y = total_per_product_other)) +
-  geom_point(alpha = 0.2) +
+  geom_point(alpha = 0.3, color = "#00BA38") +
   scale_x_continuous(breaks = seq(2, 40, by = 2)) +
   scale_y_continuous(breaks = seq(1, 11, by = 1)) +
   labs(
     title = paste(
       "Most (but not all) sales are as high in North America...
 as they are in countries other than NA and the EU"),
+    subtitle = paste("Total number of product groups, and hence data points = 175"),
     x = "Sales in North America grouped by product in £'m",
     y = "Sales in other countries grouped by product in £'m"
   )
@@ -594,13 +604,14 @@ scat_na_other_grouped
 scat_na_global_grouped <- 
   ggplot(df_sales_per_product, aes(x = total_per_product_na,
                                    y = total_per_product_global)) +
-  geom_point(alpha = 0.2) +
+  geom_point(alpha = 0.3, color = "#00BA38") +
   scale_x_continuous(breaks = seq(2, 40, by = 2)) +
   scale_y_continuous(breaks = seq(5, 70, by = 5)) +
   labs(
     title = paste(
       "Most (but not all) sales are as high in North America...
 as they are globally"),
+    subtitle = paste("Total number of product groups, and hence data points = 175"),
     x = "Sales in North America grouped by product in £'m",
     y = "Sales globally grouped by product in £'m"
   )
@@ -612,12 +623,13 @@ scat_na_global_grouped
 scat_eu_global_grouped <- 
   ggplot(df_sales_per_product, aes(x = total_per_product_eu,
                                    y = total_per_product_global)) +
-  geom_point(alpha = 0.2) +
+  geom_point(alpha = 0.3, color = "#00BA38") +
   scale_x_continuous(breaks = seq(2, 40, by = 2)) +
   scale_y_continuous(breaks = seq(5, 70, by = 5)) +
   labs(
     title = paste(
       "Most (but not all) sales are as high in the EU as they are globally"),
+    subtitle = paste("Total number of product groups, and hence data points = 175"),
     x = "Sales in the EU grouped by product in £'m",
     y = "Sales globally grouped by product in £'m"
   )
@@ -629,13 +641,14 @@ scat_eu_global_grouped
 scat_other_global_grouped <- 
   ggplot(df_sales_per_product, aes(x = total_per_product_other,
                                    y = total_per_product_global)) +
-  geom_point(alpha = 0.2) +
+  geom_point(alpha = 0.3, color = "#00BA38") +
   scale_x_continuous(breaks = seq(1, 12, by = 1)) +
   scale_y_continuous(breaks = seq(5, 70, by = 5)) +
   labs(
     title = paste(
       "Most (but not all) sales are as high in other countries...
 as they are globally"),
+    subtitle = paste("Total number of product groups, and hence data points = 175"),
     x = "Sales in other countries grouped by product in £'m",
     y = "Sales globally grouped by product in £'m"
   )
@@ -648,7 +661,7 @@ scat_other_global_grouped
 ## North America count of product groups by sales value.
 hist_na_grouped <- 
   ggplot(df_sales_per_product, aes(x = total_per_product_na)) +
-  geom_histogram(binwidth = 2, boundary = 0) +
+  geom_histogram(binwidth = 2, boundary = 0, alpha = 0.6, fill = "#00BA38") +
   scale_x_continuous(breaks = seq(2, 40, by = 2)) +
   scale_y_continuous(breaks = seq(5, 100, by = 5)) +
   labs(
@@ -656,7 +669,8 @@ hist_na_grouped <-
       "Number of product groups selling between £0 and £2m, £2m and £4m, etc."),
     subtitle = paste(
       "North America"),
-    x = "Sales in North America in £'m"
+    x = "Sales in North America in £'m",
+    y = "Number of product groups (total 175)"
   )
 
 ## View histogram.
@@ -665,7 +679,7 @@ hist_na_grouped
 ## European Union count of product groups by sales value.
 hist_eu_grouped <- 
   ggplot(df_sales_per_product, aes(x = total_per_product_eu)) +
-  geom_histogram(binwidth = 1, boundary = 0) +
+  geom_histogram(binwidth = 1, boundary = 0, alpha = 0.6, fill = "#00BA38") +
   scale_x_continuous(breaks = seq(1, 25, by = 1)) +
   scale_y_continuous(breaks = seq(5, 60, by = 5)) +
     labs(
@@ -673,7 +687,8 @@ hist_eu_grouped <-
       "Number of product groups selling between £0 and £1m, £1m and £2m, etc."),
     subtitle = paste(
       "European Union"),
-    x = "Sales in the European Union in £'m"
+    x = "Sales in the European Union in £'m",
+    y = "Number of product groups (total 175)"
   )
 
 ## View histogram.
@@ -682,7 +697,7 @@ hist_eu_grouped
 ## Other countries count of product groups by sales value.
 hist_other_grouped <- 
   ggplot(df_sales_per_product, aes(x = total_per_product_other)) +
-  geom_histogram(binwidth = 1, boundary = 0) +
+  geom_histogram(binwidth = 1, boundary = 0, alpha = 0.6, fill = "#00BA38") +
   scale_x_continuous(breaks = seq(1, 10, by = 1)) +
   scale_y_continuous(breaks = seq(5, 60, by = 5)) +
   labs(
@@ -690,7 +705,8 @@ hist_other_grouped <-
       "Number of product groups selling between £0 and £1m, £1m and £2m, etc."),
     subtitle = paste(
       "Other countries"),
-    x = "Sales in countries other than North America and the EU in £'m"
+    x = "Sales in countries other than North America and the EU in £'m",
+    y = "Number of product groups (total 175)"
   )
 
 ## View histogram.
@@ -699,7 +715,7 @@ hist_other_grouped
 ## Global count of product groups by sales value.
 hist_global_grouped <- 
   ggplot(df_sales_per_product, aes(x = total_per_product_global)) +
-  geom_histogram(binwidth = 5, boundary = 0) +
+  geom_histogram(binwidth = 5, boundary = 0, alpha = 0.6, fill = "#00BA38") +
   scale_x_continuous(breaks = seq(5, 70, by = 5)) +
   scale_y_continuous(breaks = seq(5, 100, by = 5)) +
   labs(
@@ -707,7 +723,8 @@ hist_global_grouped <-
       "Number of product groups selling between £0 and £5m, £5m and £10m, etc."),
     subtitle = paste(
       "Global"),
-        x = "Global sales in £'m"
+        x = "Global sales in £'m",
+    y = "Number of product groups (total 175)"
   )
 
 ## View histogram.
@@ -721,7 +738,7 @@ hist_global_grouped
 box_na_grouped <- 
   ggplot(df_sales_per_product) +
   geom_boxplot(aes(y = total_per_product_na),
-               alpha = .3) +
+               alpha = .3, fill = "#00BA38") +
   scale_y_continuous(breaks = seq(2, 40, by = 2)) +
   labs(
     title = paste(
@@ -743,7 +760,7 @@ box_na_grouped
 box_eu_grouped <- 
   ggplot(df_sales_per_product) +
   geom_boxplot(aes(y = total_per_product_eu),
-               alpha = .3) +
+               alpha = .3, fill = "#00BA38") +
   scale_y_continuous(breaks = seq(1, 30, by = 1)) +
   labs(
     title = paste(
@@ -765,7 +782,7 @@ box_eu_grouped
 box_other_grouped <- 
   ggplot(df_sales_per_product) +
   geom_boxplot(aes(y = total_per_product_other),
-               alpha = .3) +
+               alpha = .3, fill = "#00BA38") +
   scale_y_continuous(breaks = seq(0.5, 11, by = 0.5)) +
   labs(
     title = paste(
@@ -787,7 +804,7 @@ box_other_grouped
 box_global_grouped <- 
   ggplot(df_sales_per_product) +
   geom_boxplot(aes(y = total_per_product_global),
-               alpha = .3) +
+               alpha = .3, fill = "#00BA38") +
   scale_y_continuous(breaks = seq(2, 80, by = 2)) +
   labs(
     title = paste(
@@ -921,9 +938,9 @@ cor(df_sales_clean_final_num_only)
 ### Kurtosis is consistent across all data sets with values above 30.
 
 ### The Q-Q plots are also consistent across the data sets.
-### They all confirm a fat tail on the high end of sales values
+### They all confirm a heavy tail on the high end of sales values
 ### (some products sell at many standard deviations above the mean) and
-### no tail at the low end of sales values.
+### a light tail at the low end of sales values.
 
 ### Other country sales are slightly less predictable which could be simply
 ### due to relatively small numbers.
@@ -934,80 +951,172 @@ cor(df_sales_clean_final_num_only)
 
 # Week 6 assignment: Making recommendations to the business using R
 
-## The sales department wants to better understand if there is any relationship
-## between North America, Europe, and global sales. Therefore, you need to
-## investigate any possible relationship(s) in the sales data by creating a 
-## simple and multiple linear regression model. Based on the models and your
-## previous analysis (Weeks 1-5), you will then provide recommendations to 
-## Turtle Games based on:
-##   - Do you have confidence in the models based on goodness of fit and
-##        accuracy of predictions?
-##   - What would your suggestions and recommendations be to the business?
-##   - If needed, how would you improve the model(s)?
-##   - Explain your answers.
+## The sales department wants to better understand the relationship
+## between North America, Europe, and global sales.
 
-# Instructions
-# 1. Load and explore the data.
+## Therefore, we will investigate possible relationships in the sales data
+## using a simple linear regression model, and a multiple linear regression
+## model. 
+
+## Based on the two models, and our previous analysis (Weeks 1-5), we will 
+## provide reasoned recommendations to Turtle Games based on:
+##   - our confidence in the models based on goodness of fit and accuracy of
+##     predictions
+##   - our suggestions and recommendations
+##   - how the models could be improved
+
+## Instructions
+## 1. Load and explore the data.
 ##  - Continue to use the data frame that you prepared in the Week 5 assignment. 
-# 2. Create a simple linear regression model.
+
+## 2. Create a simple linear regression model.
 ##  - Determine the correlation between the sales columns.
 ##  - View the output.
 ##  - Create plots to view the linear regression.
-# 3. Create a multiple linear regression model
+
+## 3. Create a multiple linear regression model
 ##  - Select only the numeric columns.
 ##  - Determine the correlation between the sales columns.
 ##  - View the output.
-# 4. Predict global sales based on provided values. Compare your prediction to
-#      the observed value(s).
+
+## 4. Predict global sales based on provided values. Compare your prediction to
+##    the observed value(s).
 ##  - NA_Sales_sum of 34.02 and EU_Sales_sum of 23.80.
 ##  - NA_Sales_sum of 3.93 and EU_Sales_sum of 1.56.
 ##  - NA_Sales_sum of 2.73 and EU_Sales_sum of 0.65.
 ##  - NA_Sales_sum of 2.26 and EU_Sales_sum of 0.97.
 ##  - NA_Sales_sum of 22.08 and EU_Sales_sum of 0.52.
-# 5. Include your insights and observations.
+
+## 5. Include your insights and observations.
 
 ###############################################################################
 
-# 1. Load and explor the data
-# View data frame created in Week 5.
+## 1. Load and explore the data
 
+## View data frame created in Week 5.
+as_tibble(df_sales_clean_final)
 
-# Determine a summary of the data frame.
-
+## Determine a summary of the data frame.
+summary(df_sales_clean_final)
 
 ###############################################################################
 
-# 2. Create a simple linear regression model
+## 2. Create a simple linear regression model
+
 ## 2a) Determine the correlation between columns
-# Create a linear regression model on the original data.
+cor(df_sales_clean_final_num_only)
 
+## Create a linear regression model on the original data.
 
+## EU Sales as the dependent variable and NA Sales as the independent variable.
+model1 <- lm(EU_Sales ~ NA_Sales,
+             data = df_sales_clean_final)
+
+## View the model coefficients.
+model1
+
+## View the model summary.
+summary(model1)
+
+## Global Sales as the dependent variable and NA Sales as the independent
+## variable.
+model2 <- lm(Global_Sales ~ NA_Sales,
+             data = df_sales_clean_final)
+
+## View the model coefficients.
+model2
+
+## View the model summary.
+summary(model2)
+
+## Global Sales as the dependent variable and EU Sales as the independent
+## variable.
+model3 <- lm(Global_Sales ~ EU_Sales,
+             data = df_sales_clean_final)
+
+## View the model coefficients.
+model3
+
+## View the model summary.
+summary(model3)
+
+## Global Sales as the dependent variable and Other Sales as the independent
+## variable.
+model4 <- lm(Global_Sales ~ Other_Sales,
+             data = df_sales_clean_final)
+
+## View the model coefficients.
+model4
+
+## View the model summary.
+summary(model4)
+
+###############
 
 ## 2b) Create a plot (simple linear regression)
-# Basic visualisation.
+## Basic visualisation.
+
+## EU Sales as the dependent variable and NA Sales as the independent variable.
+plot(df_sales_clean_final$NA_Sales, df_sales_clean_final$EU_Sales)
+abline(coefficients(model1))
+
+## Global Sales as the dependent variable and NA Sales as the independent
+## variable.
+plot(df_sales_clean_final$NA_Sales, df_sales_clean_final$Global_Sales)
+abline(coefficients(model2))
+
+## Global Sales as the dependent variable and EU Sales as the independent
+## variable.
+plot(df_sales_clean_final$EU_Sales, df_sales_clean_final$Global_Sales)
+abline(coefficients(model3))
+
+## Global Sales as the dependent variable and Other Sales as the independent
+## variable.
+plot(df_sales_clean_final$Other_Sales, df_sales_clean_final$Global_Sales)
+abline(coefficients(model4))
+
+###############################################################################
+
+## 3. Create a multiple linear regression model
+## Select only numeric columns from the original data frame.
+as_tibble(df_sales_clean_final_num_only)
+
+## Multiple linear regression model.
+model5 <- lm(Global_Sales ~ NA_Sales + EU_Sales,
+             data = df_sales_clean_final_num_only)
+
+## View the model coefficients.
+model5
+
+## View the model summary.
+summary(model5)
+
+###############################################################################
+
+## 4. Predictions based on given values
+
+## Create new data frame with for predictions.
+sales_pred <- data.frame(NA_Sales = c(34.02, 3.93, 2.73, 2.26, 22.08),
+                         EU_Sales = c(23.80, 1.56, 0.65, 0.97, 0.52))
+
+## View new data frame.
+sales_pred
+
+## Predict.
+predict(model5,
+        newdata = sales_pred)
+
+
+## Compare with observed values for a number of records.
+as_tibble(df_sales_clean_final_num_only)
 
 
 ###############################################################################
 
-# 3. Create a multiple linear regression model
-# Select only numeric columns from the original data frame.
+### 5. Observations and insights
 
-
-# Multiple linear regression model.
-
-
-###############################################################################
-
-# 4. Predictions based on given values
-# Compare with observed values for a number of records.
-
-
-
-###############################################################################
-
-# 5. Observations and insights
-# Your observations and insights here...
-
+### As expected given our earlier calculations of correlation, sales in one
+### location can be used to predict sales in another.
 
 
 ###############################################################################
